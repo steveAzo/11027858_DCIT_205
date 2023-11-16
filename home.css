@@ -24,3 +24,23 @@
     background-color: bisque;
 }
 
+video {
+    align-self: center;
+    margin-left: 90px;
+}
+
+.big_video_container {
+    video {
+        align-self: center;
+        margin-left: 90px;
+    }
+}
+
+.video_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 100%;
+}
+
