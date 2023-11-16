@@ -1,0 +1,25 @@
+
+.nav a {
+    margin-left: 15px; /* Add some spacing between the links if needed */
+    text-decoration: none;
+    color: #333; /* Set the color of the links */
+    font-weight: bold; /* Make the font bold if desired */
+}
+
+#CS_logo {
+    max-width: 100%;
+    height: 100px;
+    width: 200px;
+}
+
+
+.nav_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.image_div {
+    align-self: flex-start;
+}
+
