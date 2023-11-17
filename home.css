@@ -22,11 +22,12 @@
 
 .nav {
     background-color: bisque;
+    width: auto;
 }
 
 video {
     align-self: center;
-    margin-left: 90px;
+    margin:auto;
 }
 
 .big_video_container {
@@ -43,4 +44,41 @@ video {
     width: 85%;
     height: 100%;
 }
+
+footer {
+    background-color: bisque;
+    color:#333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-column {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2em;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+  }
+  
+  .footer-column p,
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 400;
+  }
+  
+  .footer-column a:hover {
+    text-decoration: underline;
+  }
+  
 
