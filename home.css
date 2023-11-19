@@ -80,5 +80,86 @@ footer {
   .footer-column a:hover {
     text-decoration: underline;
   }
-  
 
+
+.Bootstrapcamp {
+    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-left: 35px;
+    background-color: #949393;
+}
+
+.Undergradute {
+    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-left: 35px;
+    background-color: #949393;
+}
+
+.MPhil_MSc {
+    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-left: 35px;
+    background-color: #949393;
+}
+
+.PHD {
+    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-left: 35px;
+    background-color: #949393;
+    
+}
+
+.Bootstrap_row,
+.Undergraduate_row,
+.MPhil_Msc_row,
+.PHD_row {
+    background-color: #424242;
+    padding-top: -30px;
+    align-content: center;
+}
+
+row_heading a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    color:#fff;
+    padding-top: -10px;
+    text-decoration: none;
+    color: #fff;
+
+} 
+
+row heading a:hover {
+color: burlywood;
+}
+
+p {
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-left: -10px;
+    margin-left: -15px;
+    margin-right: 10px;
+}
+
+.phd_text {
+    margin-top: 28px;
+}
+
+@media (max-width: 750px) {
+    .element {
+        width: 350px;
+    }
+}
+
+@media (min-width: 750.02px) and (max-width:1000px) {
+    .element {
+        width: 450px;
+    }
+}
+
+@media (min-width:100.02px) {
+    .element {
+        width: 600px;
+    }
+  }
