@@ -1,29 +1,80 @@
-
-.nav a {
-    margin: 10px; /* Add some spacing between the links if needed */
-    text-decoration: none;
-    color: #333; /* Set the color of the links */
-    font-weight: bold; /* Make the font bold if desired */
-    float: left;
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
 }
 
-#CS_logo {
-    max-width: 100%;
-    height: 70px;
-    width: 500px;
+header {
+    background-color: bisque;
 }
-
 
 .nav_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
 }
 
-.nav {
-    background-color: bisque;
-    width: auto;
+.logo img {
+    max-width: 100%;
+    height: auto;
 }
+
+.menu {
+    display: flex;
+}
+
+.menu a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Dropdown styling */
+.dropdown {
+    display: none;
+}
+
+.dropbtn {
+    background-color: bisque;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: bisque;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .nav_container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .dropdown {
+        display: block;
+    }
+}
+
+
 
 video {
     align-self: center;
@@ -45,42 +96,49 @@ video {
     height: 100%;
 }
 
-footer {
-    background-color: bisque;
-    color:#333;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .footer-column {
-    flex: 1;
-    margin-right: 20px;
-  }
-  
-  .footer-column h3 {
-    font-size: 1.2em;
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
-  }
-  
-  .footer-column p,
-  .footer-column ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-column a {
+/* Style for the footer container */
+.footer-area {
+    background-color: #949393; 
     color: #333;
-    text-decoration: none;
-    font-weight: 400;
-  }
-  
-  .footer-column a:hover {
-    text-decoration: underline;
-  }
 
+/* Style for the row containing the four sections */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: -10px; /* Adjust negative margin as needed */
+}
+
+/* Style for each column containing links */
+.single-footer-widget {
+    flex: 1; /* Each column takes equal width */
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+/* Align links from left to right within each column */
+.single-footer-widget ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.single-footer-widget ul li {
+    margin-bottom: 5px; /* Adjust margin as needed */
+}
+
+/* Style for the links */
+.single-footer-widget ul li a {
+    color: #333; /* Set your desired link color */
+    text-decoration: none;
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 767px) {
+    .single-footer-widget {
+        text-align: center; /* Center align on small screens */
+        flex: 100%; /* Full width on small screens */
+    }
+}
 
 .Bootstrapcamp {
     padding-bottom: 30px;
@@ -123,10 +181,10 @@ footer {
 row_heading a{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
-    color:#fff;
+    color:#347e86;
     padding-top: -10px;
     text-decoration: none;
-    color: #fff;
+    color: #347e86;
 
 } 
 
@@ -162,4 +220,53 @@ p {
     .element {
         width: 600px;
     }
-  }
+}
+
+
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; /* Clear float */
+}
+
+.section {
+    margin-bottom: 40px;
+    overflow: hidden; /* Clear float */
+}
+
+.description {
+    float: left;
+    width: 50%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.description h3 {
+    margin-top: 0;
+}
+
+img {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/* Clear float for every second section to start a new row */
+.section:nth-child(even) {
+    clear: both;
+}
+
+/* Video Section styles */
+.video-section {
+    clear: both;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .description,
+    img {
+        width: 100%;
+        float: none;
+    }
+}
