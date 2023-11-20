@@ -1,8 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="home.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Science Department</title>
+    <link rel="stylesheet" href="home.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f471;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgb(210, 222, 204);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin-top: 10px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -35,80 +93,51 @@
                         <a href="faculty.html">Faculty</a>
                         <a href="staff.html">Staff</a>
                         <a href="student.html">Student</a>
-                        <a href="projeccts.html">Student</a>
-                        <a href="newsletter.html">Student</a>
+                        <a href="projeccts.html">Projects</a>
+                        <a href="newsletter.html">Newsletter</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Rest of your content goes here -->
 
-    <script>
-        function toggleDropdown() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
     <main>
         <section>
-            <div class="big_video_container">
-                <div class="video-container">
-                    <video autoplay="false" muted loop id="Video" width="100%" height="100%" style="object-fit: cover" poster="images/poster.jpeg">
-                        <source src="video-bg.mp4" type="video/mp4">
-                        Your browser does not support HTML5 video.
-                    </video>
-                </div>
-            </div>
+            <h1>Computer Science Department Newsletter</h1>
+            <p>Stay informed with the latest updates and announcements from our department.</p>
         </section>
-        <div>
-            <div class="container">
-                <div class="Bootstrapcamp">
-                    <div class="row_heading">
-                        <a href="Bootstrap_Camp_Courses">Bootstrap Camp Courses</a>
-                    </div>
-                    <p>Click here to access our wide variety of bootstrap courses</p>
-                </div>
-                <div class="Undergraduate">
-                    <div class="row_heading">
-                        <a href="Undergraduate.html">Undergraduate Courses</a>
-                    </div>
-                    <p>We have a fine combination of Undergraduate Courses. Do well to check it out</p>
-                </div>
-                <div class="MPhil_MSc">
-                    <div class="row_heading">
-                        <a href="Postgraduate.html">MPhil and MSc. Programmes</a>
-                    </div>
-                    <p>Click here to get access to our variety of MPhil and MSc. programmes.</p>
-                </div>
-                <div class="PHD">
-                    <div class="row_heading">
-                        <a href="Postgraduate.html">PHD Programmes
-                            <br>
-                        </a>
-                    </div>
-                    <p class="phd_text">Click here to get access to our variety of Ph.D. programmes</p>
-                </div>
-            </div>
-        </div>
-    </main>
-    
-    <h1>This Computer Science thing be SCAM charlie</h1>
 
-    <!-- Start Footer Area -->
+        <!-- Newsletter Subscription Form -->
+        <section>
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Receive news, event notifications, and more directly to your inbox.</p>
+            
+            <!-- Replace 'YOUR_FORM_ACTION_URL' with the actual URL to process the form -->
+            <form action="YOUR_FORM_ACTION_URL" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="image-container">
+        <!-- You can add more images as needed -->
+        <img class="scroll-image" src="pictures/coding.jpeg" alt="Image 1">
+        <img class="scroll-image" src="pictures/distance_education.jpg" alt="Image 2">
+        <img class="scroll-image" src="pictures/entrance.jpeg" alt="Image 3">
+        <img class="scroll-image" src="pictures/facade.jpeg" alt="Image 3">
+        <img class="scroll-image" src="pictures/graduation.jpeg" alt="Image 3">
+        <img class="scroll-image" src="pictures/hod.jpeg" alt="Image 3">
+        <img class="scroll-image" src="pictures/hub.jpeg" alt="Image 3">
+        <img class="scroll-image" src="pictures/inside 2.jpeg" alt="Image 3">
+        <img class="scroll-image" src="pictures/inside.jpeg" alt="Image 3">
+        <img class="scroll-image" src="pictures/learning.jpeg" alt="Image 3">
+        <img class="scroll-image" src="pictures/office.jpeg" alt="Image 3">
+        <!-- Add more images here -->
+    </div>
+
     <footer class="footer-area section-gap">
         <div class="container">
             <div class="row">
@@ -253,6 +282,5 @@
             </div>
         </div>
     </footer>
-    
 </body>
 </html>

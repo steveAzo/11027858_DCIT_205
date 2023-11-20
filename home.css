@@ -11,7 +11,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
 }
 
 .logo img {
@@ -32,7 +32,7 @@ header {
 
 /* Dropdown styling */
 .dropdown {
-    display: none;
+    display:none;
 }
 
 .dropbtn {
@@ -74,18 +74,14 @@ header {
     }
 }
 
-
-
 video {
     align-self: center;
-    margin:auto;
+    margin: auto;
 }
 
-.big_video_container {
-    video {
-        align-self: center;
-        margin-left: 90px;
-    }
+.big_video_container video {
+    align-self: center;
+    margin-left: 90px;
 }
 
 .video_container {
@@ -98,8 +94,9 @@ video {
 
 /* Style for the footer container */
 .footer-area {
-    background-color: #949393; 
+    background-color: #949393;
     color: #333;
+}
 
 /* Style for the row containing the four sections */
 .row {
@@ -140,59 +137,60 @@ video {
     }
 }
 
-.Bootstrapcamp {
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* ... (previous styles remain unchanged) ... */
+
+main .container {
+    display: grid;
+    grid-template-columns: 220px 220px 220px 220px; /* Two columns with a ratio of 2:1 */
+    grid-template-rows: 70px 200px; /* Two rows with a ratio of 1:2 */
+    gap: 30px; /* Gap between columns */
+    max-width: 800px; /* Set a maximum width for the container */
+    margin: 50px auto; /* Center the container and add some margin */
+    align-self: center;
+    margin-left: 250px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+}
+
+main .Bootstrapcamp,
+main .Undergradute,
+main .MPhil_MSc,
+main .PHD {
     padding-bottom: 30px;
     padding-top: 20px;
     padding-left: 35px;
     background-color: #949393;
 }
 
-.Undergradute {
-    padding-bottom: 30px;
-    padding-top: 20px;
-    padding-left: 35px;
-    background-color: #949393;
-}
-
-.MPhil_MSc {
-    padding-bottom: 30px;
-    padding-top: 20px;
-    padding-left: 35px;
-    background-color: #949393;
-}
-
-.PHD {
-    padding-bottom: 40px;
-    padding-top: 30px;
-    padding-left: 35px;
-    background-color: #949393;
-    
-}
-
-.Bootstrap_row,
-.Undergraduate_row,
-.MPhil_Msc_row,
-.PHD_row {
+.main .Bootstrap_row,
+.main .Undergraduate_row,
+.main .MPhil_Msc_row,
+.main .PHD_row {
     background-color: #424242;
     padding-top: -30px;
     align-content: center;
 }
 
-row_heading a{
+main .row_heading a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
-    color:#347e86;
+    color: #fff;
     padding-top: -10px;
     text-decoration: none;
-    color: #347e86;
-
-} 
-
-row heading a:hover {
-color: burlywood;
+    color: #fff;
 }
 
-p {
+main .row_heading a:hover {
+    color: burlywood;
+}
+
+main p {
     font-size: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding-left: -10px;
@@ -200,73 +198,27 @@ p {
     margin-right: 10px;
 }
 
-.phd_text {
+main .phd_text {
     margin-top: 28px;
 }
 
-@media (max-width: 750px) {
-    .element {
-        width: 350px;
-    }
+/* ... (rest of the styles remain unchanged) ... */
+
+
+#image-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
 }
 
-@media (min-width: 750.02px) and (max-width:1000px) {
-    .element {
-        width: 450px;
-    }
+.scroll-image {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    width: 250px; /* Set your desired image width */
+    height: 200px;
 }
 
-@media (min-width:100.02px) {
-    .element {
-        width: 600px;
-    }
+.scroll-image:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
 }
 
-
-
-.content {
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden; /* Clear float */
-}
-
-.section {
-    margin-bottom: 40px;
-    overflow: hidden; /* Clear float */
-}
-
-.description {
-    float: left;
-    width: 50%;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.description h3 {
-    margin-top: 0;
-}
-
-img {
-    float: left;
-    width: 50%;
-    box-sizing: border-box;
-}
-
-/* Clear float for every second section to start a new row */
-.section:nth-child(even) {
-    clear: both;
-}
-
-/* Video Section styles */
-.video-section {
-    clear: both;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .description,
-    img {
-        width: 100%;
-        float: none;
-    }
-}
