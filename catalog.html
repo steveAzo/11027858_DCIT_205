@@ -1,13 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="javascript.js" defer></script>
+    <title>Computer Science Department Catalogue - University of Ghana</title>
     <link rel="stylesheet" href="home.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f7ff; /* Light blue background */
+            color: #333; /* Dark gray text */
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .course, .faculty-member {
+            background-color: hsla(156, 44%, 79%, 0.482);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .course:hover, .faculty-member:hover {
+            transform: scale(1.05);
+        }
+
+        .faculty-member img {
+            width: 40%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .faculty-member h3 {
+            color: #007bff; /* Bright blue faculty names */
+        }
+
+        .faculty-member p {
+            line-height: 1.6;
+        }
+
+        .course img{
+            width: 30%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+
+    <header>
+        <nav class="nav">
+            <div class="nav_container">
+                <div class="logo">
+                    <img src="pictures/comScience_logo.png" alt="Company Science Logo" id="CS_logo">
+                </div>
+                <div class="menu" id="mainMenu">
+                    <a href="home.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="event.html">Event</a>
+                    <a href="catalog.html" class="active">Catalog</a>
+                    <a href="resource.html">Resources</a>
+                    <a href="faculty.html">Faculty</a>
+                    <a href="staff.html">Staff</a>
+                    <a href="student.html">Student</a>
+                    <a href="projeccts.html">Projects</a>
+                    <a href="newsletter.html">Newsletter</a>
+
+                </div>
+                <!-- Dropdown menu for smaller screens -->
+                <div class="dropdown" id="dropdownMenu">
+                    <button class="dropbtn" onclick="toggleDropdown()">&#9776; Menu</button>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="about.html">Home</a>
+                        <a href="event.html">Event</a>
+                        <a href="catalog.html">Catalog</a>
+                        <a href="resource.html">Resources</a>
+                        <a href="faculty.html">Faculty</a>
+                        <a href="staff.html">Staff</a>
+                        <a href="student.html">Student</a>
+                        <a href="projeccts.html">Student</a>
+                        <a href="newsletter.html">Student</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Rest of your content goes here -->
+
+    <script>
+        function toggleDropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+    <section id="courses">
+        <h2>Courses Offered</h2>
+
+        <div class="course">
+            <h3>Introduction to Programming</h3>
+            <p>An introduction to the fundamentals of programming and problem-solving.</p>
+            <img src="pictures/programming fundamentals.jpg" alt="Programming Course">
+        </div>
+
+        <div class="course">
+            <h3>Data Structures and Algorithms</h3>
+            <p>Explore the foundational concepts of data structures and algorithms.</p>
+            <img src="pictures/data structures and algorithms.png" alt="Data Structures Course" class="pic">
+        </div>
+
+        <div class="course">
+            <h3>Mobile App Development</h3>
+            <p>Explore the foundational concepts of data structures and algorithms.</p>
+            <img src="pictures/data structures and algorithms.png" alt="Data Structures Course" class="pic">
+        </div>
+
+        <div class="course">
+            <h3>Cybersecurity</h3>
+            <p>Explore the foundational concepts of data structures and algorithms.</p>
+            <img src="pictures/Cyber Security.jpg" alt="Data Structures Course" class="pic">
+        </div>
+
+        <!-- Add more courses as needed -->
+
+    </section>
+
+    <section id="faculty">
+        <h2>Faculty Members</h2>
+
+        <div class="faculty-member">
+            <img src="pictures/jamal.jpg" alt="Jamal-Deen Abdulai">
+            <h3>Jamal-Deen Abdulai</h3>
+            <p>Head of Department, specializing in [area of expertise].</p>
+        </div>
+
+        <div class="faculty-member">
+            <img src="pictures/mark attah.jpeg" alt="Mark Attah Mensah">
+            <h3>Mark Attah Mensah</h3>
+            <p>Lecturer and Course Advisor, bringing industry experience to the classroom.</p>
+        </div>
+
+        <div class="faculty-member">
+            <img src="pictures/soli.jpg" alt="Michael Soli">
+            <h3>Michael Soli</h3>
+            <p>Lecturer and Software Engineer, passionate about cutting-edge technologies.</p>
+        </div>
+
+        <!-- Add more faculty members as needed -->
+
+    </section>
+
+    <footer class="footer-area section-gap">
+        <div class="container">
+            <div class="row">
+                <!-- Academic Links -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h4>Academics</h4>
+                        <ul>
+                            <li><a href="/undergrad-course">Undergraduate Courses</a></li>
+                            <li><a href="/mphil-course">Graduate Courses (MPhil Computer Science)</a></li>
+                            <li><a href="/msc-course">Graduate Courses (MSc Computer Science)</a></li>
+                            <li><a href="/phd-course">Graduate Courses (PhD)</a></li>
+                            <li><a href="https://www.ug.edu.gh/academics/calendar">Academic Calendar</a></li>
+                            <!-- Add more links as needed -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Admissions Links -->
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h4>Admissions</h4>
+                        <ul>
+                            <li><a href="http://admission.ug.edu.gh/applying/undergraduate/overview">Undergraduate</a></li>
+                            <li><a href="http://admission.ug.edu.gh/applying/postgraduate/overview">Graduate</a></li>
+                            <li><a href="http://admission.ug.edu.gh/applying/international/overview">International Students</a></li>
+                            <li><a href="/entry">Entry Requirements</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Research Links -->
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h4>Research</h4>
+                        <ul>
+                            <li><a href="/research-dcs">Research at DCS</a></li>
+                            <li><a href="/research-impact">Research Impact</a></li>
+                            <li><a href="http://balme.ug.edu.gh/">Libraries</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- About Links -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h4>About The Department</h4>
+                        <ul>
+                            <li><a href="/about">Introducing DCS</a></li>
+                            <li><a href="/officehod">Head of Department's office</a></li>
+                            <li><a href="/faculty">Faculty</a></li>
+                            <li><a href="/events">Events</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact and Location -->
+            <div class="row">
+                <div class="col-lg-8 col-md-6 col-sm-6">
+                    <div class="single-footer-widget pt-10">
+                        <h4>Contact Us </h4>
+                        <!-- Add your contact details here -->
+                        <ul>
+                            <li>
+                                <div class="single-contact-address d-flex column">
+                                    <div class="contact-details">
+                                        <div class="icon">
+                                            <span class="lnr lnr-phone-handset" style="margin-right:10px;color:#FFF"></span>
+                                            <a style="margin-left:10px" href="tel:+233 501 382 035"></a>
+                                            <span class="text text-white">+233 501 382 035</span>
+                                        </div>
+                                        <div class="icon">
+                                            <span class="lnr lnr-phone-handset" style="margin-right:10px;color:#FFF"></span>
+                                            <a style="margin-left:10px" href="tel:+233 559 145 698"></a>
+                                            <span class="text text-white">+233 559 145 698</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="contact-details">
+                                    <div class="icon">
+                                        <span class="lnr lnr-envelope" style="margin-right:10px;color:#FFF"></span>
+                                        <a style="margin-left:10px" href="mailto:dcs@ug.edu.gh"></a>
+                                        <span class="text text-white">dcs@ug.edu.gh</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Location -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-footer-widget pt-10">
+                        <h5 class="text-white pb-10">Location </h5>
+                        <a href="https://www.google.com/maps/dir/5.6523661,-0.1776494/department+of+computer+science+ug/@5.6522658,-0.1857019,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0xfdf9c866f97cb5d:0x847b90759758b427!2m2!1d-0.183912!2d5.6545237"></a>
+                        <span class="text text-white">University Of Ghana, Legon Campus</span>
+                        <p class="text-white">Opposite Mathematics Department</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-footer-widget pt-10">
+                        <h4>Newsletter</h4>
+                        <p>Stay updated with our latest</p>
+                        <div id="mc_embed_signup">
+                            <!-- Add your newsletter form here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="col-lg-8 col-md-6 col-sm-6">
+                    <div class="single-footer-widget pt-10">
+                        <h4>Follow Us</h4>
+                        <a href="https://www.facebook.com/University-of-GhanaDepartment-of-Computer-Science-116786389698948/?ref=search&amp;__tn__=%2Cd%2CP-R&amp;eid=ARBBAU8wKSNVs2fNZimGERUZJeac3TbmQsaZDsz4ZoEqZ95bzGZf3siMET6V1B1NuOzqLZwhXCqqrtIt">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/univofghana">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/explore/locations/468119891/university-of-ghana/">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <!-- Add more social media links as needed -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="footer-bottom row align-items-center justify-content-between">
+                <p class="footer-text m-0 col-lg-6 col-md-12">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.-->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+<script src="highlight.js"></script>
 </body>
+
 </html>

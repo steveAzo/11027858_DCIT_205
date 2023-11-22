@@ -74,6 +74,15 @@ header {
     }
 }
 
+.menu a.active {
+    color: #fff; /* Change the color for the active link */
+    background-color: #333; /* Change the background color for the active link */
+}
+
+
+
+
+
 video {
     align-self: center;
     margin: auto;
