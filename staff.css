@@ -58,6 +58,32 @@ font-family:poppins;
 
 
 
+
+
+
+
+
+body {
+    background-color:rgb(255, 254, 254);
+    background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)),  url("pictures/our_community.jpg");
+    background-size: auto,cover;
+    background-attachment: fixed;
+}
+
+    body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+        -moz-animation: none !important;
+        -webkit-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+        -moz-transition: none !important;
+        -webkit-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+    }
+
+
+
+
 /* Basic */
 
 	@-ms-viewport {
@@ -76,51 +102,9 @@ font-family:poppins;
 
 	}
 
-	html {
-		box-sizing: border-box;
-	}
-
-	*, *:before, *:after {
-		box-sizing: inherit;
-	}
-
-	body {
-		background-color:rgb(255, 254, 254);
-		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)),  url("images/cs\ department\ 5.jpg");
-		background-size: auto,cover;
-		background-attachment: fixed;
-	}
-
-		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-			-moz-animation: none !important;
-			-webkit-animation: none !important;
-			-ms-animation: none !important;
-			animation: none !important;
-			-moz-transition: none !important;
-			-webkit-transition: none !important;
-			-ms-transition: none !important;
-			transition: none !important;
-		}
-
-/* Type */
-
-	body, input, select, textarea {
-		color: #ffffff;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 16.5pt;
-		font-weight: 300;
-		line-height: 1.65;
-	}
 
 
-		a:hover {
-			border-bottom-color: transparent;
-			color: #ffffff !important;
-		}
-
-		
-
-	strong, b {
+    strong, b {
 		color: #ffffff;
 		font-weight: 600;
 	}
@@ -172,13 +156,14 @@ font-family:poppins;
 	h5 {
 		font-size: 0.7em;
 	}
-
+    
 	h6 {
 		font-size: 0.7em;
 	}
-/*     =================================================================================================
-========================================================================================================*/
-	@media screen and (max-width: 736px) {
+
+
+
+@media screen and (max-width: 736px) {
 
 		h2 {
 			font-size: 1em;
@@ -228,9 +213,9 @@ font-family:poppins;
 			margin: 4em 0;
 		}
 
-/* Section/Article */	
 
-			.wrapper.style5:before, .wrapper.style5:after {
+
+.wrapper.style5:before, .wrapper.style5:after {
 				background-image: url("images/cs\ department\ 5.jpg");
 			}
 
@@ -260,6 +245,7 @@ font-family:poppins;
 				-webkit-flex-direction: row;
 				-ms-flex-direction: row;
 				flex-direction: row;
+                padding: 10px;
 			}
 
 			.wrapper.spotlight .image {
@@ -321,5 +307,3 @@ font-family:poppins;
 			}
 
 		}
-
-		

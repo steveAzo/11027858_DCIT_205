@@ -5,8 +5,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="home.css">
+    <link rel="icon" href="pictures/fav_icon.png" type="png">>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+       
+
+        .background-placeholder {
+            /* Placeholder for background image */
+            background-image: url('pictures/hub.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            height: 300px; /* Adjust the height as needed */
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1176d4;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+
+        .day {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .day a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        .event {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .event h3 {
+            color: #1176d4;
+        }
+
+        .event p {
+            margin: 5px 0;
+        }
+
+        .event button {
+            background-color: #1176d4;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .event button:hover {
+            background-color: #0e5aa8;
+        }
+
+        .reviews {
+            margin-top: 20px;
+        }
+
+        .review {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        
+    </style>
 </head>
 <body>
+
     <header>
         <nav class="nav">
             <div class="nav_container">
@@ -22,11 +116,10 @@
                     <a href="faculty.html">Faculty</a>
                     <a href="staff.html">Staff</a>
                     <a href="student.html">Student</a>
-                    <a href="projeccts.html">Projects</a>
+                    <a href="projeccts.html">Library</a>
                     <a href="newsletter.html">Newsletter</a>
 
                 </div>
-                <!-- Dropdown menu for smaller screens -->
                 <div class="dropdown" id="dropdownMenu">
                     <button class="dropbtn" onclick="toggleDropdown()">&#9776; Menu</button>
                     <div class="dropdown-content" id="myDropdown">
@@ -44,39 +137,62 @@
             </div>
         </nav>
     </header>
+    <div class="background-placeholder"></div>
 
-    <!-- Rest of your content goes here -->
+    <section>
+        <h2>Upcoming Events</h2>
 
-    <script>
-        function toggleDropdown() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
+        <div class="calendar">
+            <div class="day"><a href="#day1">1</a></div>
+            <div class="day"><a href="#day2">2</a></div>
+            <div class="day"><a href="#day3">3</a></div>
+            <div class="day"><a href="#day4">4</a></div>
+            <div class="day"><a href="#day5">5</a></div>
+            <div class="day"><a href="#day6">6</a></div>
+            <div class="day"><a href="#day7">7</a></div>
+        </div>
 
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
+        <div class="event" id="day1">
+            <h3>COMPSSA Quiz Competition</h3>
+            <p>Date: December 15, 2023</p>
+            <p>Time: 2:00 PM - 5:00 PM</p>
+            <p>Venue: Computer Science Auditorium</p>
+            <p>Description: Join us for an exciting quiz competition organized by COMPSSA. Test your knowledge and win exciting prizes!</p>
+            <button>Register</button>
+        </div>
 
+        <div class="event" id="day2">
+            <h3>Huawei Global Challenge</h3>
+            <p>Date: February 5, 2024</p>
+            <p>Time: 3:00 PM - 6:00 PM</p>
+            <p>Venue: Room 102</p>
+            <p>Description: Participate in the Huawei Global Challenge and showcase your innovative solutions. Don't miss this opportunity!</p>
+            <button>Register</button>
+        </div>
 
-    <div>
-        <h1>I'll do you last minute. Remind me anytime I past by okay</h1>
-    </div>
+        <div class="event" id="day3">
+            <h3>Google Developers Group Devfest</h3>
+            <p>Date: December 3, 2023</p>
+            <p>Time: 1:00 PM - 4:00 PM</p>
+            <p>Venue: JQB room 23</p>
+            <p>Description: Join us for Devfest organized by Google Developers Group. Explore the latest in technology and development.</p>
+            <button>Register</button>
+        </div>
+    </section>
 
+    <section class="reviews">
+        <h2>Feedback and Reviews</h2>
 
+        <div class="review">
+            <p><strong>Bayat Osman:</strong> This event was fantastic! I learned a lot.</p>
+        </div>
 
+        <div class="review">
+            <p><strong>Precious Amenuveve:</strong> Great initiative by the CS department. Looking forward to more events!</p>
+        </div>
 
-
-
-
+        <!-- Add more reviews as needed -->
+    </section>
 
     <footer class="footer-area section-gap">
         <div class="container">
@@ -134,10 +250,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
 
-            <!-- Contact and Location -->
-            <div class="row">
                 <div class="col-lg-8 col-md-6 col-sm-6">
                     <div class="single-footer-widget pt-10">
                         <h4>Contact Us </h4>
@@ -151,11 +264,7 @@
                                             <a style="margin-left:10px" href="tel:+233 501 382 035"></a>
                                             <span class="text text-white">+233 501 382 035</span>
                                         </div>
-                                        <div class="icon">
-                                            <span class="lnr lnr-phone-handset" style="margin-right:10px;color:#FFF"></span>
-                                            <a style="margin-left:10px" href="tel:+233 559 145 698"></a>
-                                            <span class="text text-white">+233 559 145 698</span>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </li>
@@ -171,57 +280,30 @@
                         </ul>
                     </div>
                 </div>
-
-                <!-- Location -->
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-footer-widget pt-10">
+                 <!-- Location -->
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
                         <h5 class="text-white pb-10">Location </h5>
                         <a href="https://www.google.com/maps/dir/5.6523661,-0.1776494/department+of+computer+science+ug/@5.6522658,-0.1857019,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0xfdf9c866f97cb5d:0x847b90759758b427!2m2!1d-0.183912!2d5.6545237"></a>
                         <span class="text text-white">University Of Ghana, Legon Campus</span>
                         <p class="text-white">Opposite Mathematics Department</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Newsletter Section -->
-            <div class="row">
+
                 <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-footer-widget pt-10">
-                        <h4>Newsletter</h4>
-                        <p>Stay updated with our latest</p>
-                        <div id="mc_embed_signup">
-                            <!-- Add your newsletter form here -->
-                        </div>
-                    </div>
+                    <p class="single-footer-widget">
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.-->
+                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                    </p>
                 </div>
 
-                <!-- Social Media Links -->
-                <div class="col-lg-8 col-md-6 col-sm-6">
-                    <div class="single-footer-widget pt-10">
-                        <h4>Follow Us</h4>
-                        <a href="https://www.facebook.com/University-of-GhanaDepartment-of-Computer-Science-116786389698948/?ref=search&amp;__tn__=%2Cd%2CP-R&amp;eid=ARBBAU8wKSNVs2fNZimGERUZJeac3TbmQsaZDsz4ZoEqZ95bzGZf3siMET6V1B1NuOzqLZwhXCqqrtIt">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="https://twitter.com/univofghana">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/explore/locations/468119891/university-of-ghana/">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                        <!-- Add more social media links as needed -->
-                    </div>
-                </div>
             </div>
-
-            <!-- Copyright Section -->
-            <div class="footer-bottom row align-items-center justify-content-between">
-                <p class="footer-text m-0 col-lg-6 col-md-12">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.-->
-                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
-                </p>
-            </div>
+            
         </div>
     </footer>
+
 <script src="highlight.js"></script>
+
 </body>
 </html>

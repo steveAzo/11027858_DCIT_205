@@ -1,9 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="home.css">
-    <title>Computer Science Department</title>
-    <link rel="icon" href="pictures/fav_icon.png" type="png"> 
+    <link rel="stylesheet" href="library.css">
+    <link rel="icon" href="pictures/fav_icon.png" type="png">
+
+    <style>
+        body {
+        margin: 0;
+        padding: 10px;
+        font-family: 'Arial', sans-serif;
+    }
+
+#hero {
+    background: url('pictures/balme.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: justify;
+    padding: 100px 20px;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#main {
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.feature img,
+.image-featured img,
+.button,
+#sidebar {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+#sidebar {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#content {
+    text-align: center;
+}
+
+
+    </style>
+
+
 </head>
 <body>
     <header>
@@ -12,8 +82,8 @@
                 <div class="logo">
                     <img src="pictures/comScience_logo.png" alt="Company Science Logo" id="CS_logo">
                 </div>
-                <div class="menu" id="mainMenu"> 
-                    <a href="home.html" class="active">Home</a>
+                <div class="menu" id="mainMenu">
+                    <a href="home.html">Home</a>
                     <a href="about.html">About</a>
                     <a href="event.html">Event</a>
                     <a href="catalog.html">Catalog</a>
@@ -21,7 +91,7 @@
                     <a href="faculty.html">Faculty</a>
                     <a href="staff.html">Staff</a>
                     <a href="student.html">Student</a>
-                    <a href="library.html">Library</a>
+                    <a href="library.html" class="active">Library</a>
                     <a href="newsletter.html">Newsletter</a>
 
                 </div>
@@ -36,7 +106,7 @@
                         <a href="faculty.html">Faculty</a>
                         <a href="staff.html">Staff</a>
                         <a href="student.html">Student</a>
-                        <a href="library.html">Student</a>
+                        <a href="library.html">Library</a>
                         <a href="newsletter.html">Student</a>
                     </div>
                 </div>
@@ -64,52 +134,119 @@
             }
         }
     </script>
-    <main>
-        <section>
-            <div class="big_video_container">
-                <div class="video-container">
-                    <video autoplay="false" muted loop id="Video" width="100%" height="100%" style="object-fit: cover" poster="images/poster.jpeg">
-                        <source src="video-bg.mp4" type="video/mp4">
-                        Your browser does not support HTML5 video.
-                    </video>
-                </div>
+
+</header>
+
+
+<header style="background-color: #1176d4; color: #fff; padding: 10px 20px; align-content: center;">
+        <!-- Your header content goes here -->
+        <h1>CS Department innovative  Library</h1>
+    </header>
+
+    <div id="header-wrapper5">
+        <div id="header" class="container">
+            <section id="hero" class="container">
+                <header style="background-color: #1176d4; color: #fff; padding: 10px 20px;">
+                    <h2>Library
+                        <br />
+                    </h2>
+                </header>
+                <p>Welcome to our library, where curiosity meets boundless possibilities.
+                    <br />
+                </p>
+                <ul class="actions">
+                    <li><a href="#" class="button">Read Wide</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <div id="page-wrapper">
+        <!-- Header -->
+        <div id="header-wrapper">
+            <div id="header" class="container">
+                <!-- Your header content goes here -->
             </div>
-        </section>
-        <div>
-            <div class="container">
-                <div class="Bootstrapcamp">
-                    <div class="row_heading">
-                        <a href="Bootstrap_Camp_Courses">Bootstrap Camp Courses</a>
+        </div>
+
+        <!-- Main -->
+        <div class="wrapper">
+            <div class="container" id="main">
+                <div class="row gtr-150">
+                    <div class="col-4 col-12-narrower">
+                        <!-- Sidebar -->
+                        <section id="sidebar">
+                            <section>
+                                <header style="background-color: #1176d4; color: #fff; padding: 10px 20px;">
+                                    <h3>About Us</h3>
+                                </header>
+                                <p>Welcome to our library where curiosity meets exploration.
+                                    Our mission is to provide a vibrant and inclusive space for learning, offering a diverse collection of resources and innovative services.</p>
+                                <ul class="actions">
+                                    <li><a href="#" class="button">Collections</a></li>
+                                </ul>
+                            </section>
+                            <section>
+                                <a href="#" class="image-featured"><img src="pictures/balal.jpg" alt="" /></a>
+                                <header style="background-color: #1176d4; color: #fff; padding: 10px 20px;">
+                                    <h3>Library Services</h3>
+                                </header>
+                                <p>We offer traditional book borrowing and digital assistance. Open on weekdays from 8 am to 10 pm and weekends from 8 am to 4 pm.</p>
+                            </section>
+                        </section>
                     </div>
-                    <p>Click here to access our wide variety of bootstrap courses</p>
+                    <div class="col-8 col-12-narrower imp-narrower">
+                        <!-- Content -->
+                        <article id="content">
+                            <header style="background-color: #1176d4; color: #fff; padding: 10px 20px;">
+                                <h2>Digital Resources</h2>
+                                <p>From e-books to online databases, we offer a seamless exploration of knowledge at your fingertips.</p>
+                            </header>
+                            <a href="#" class="image-featured"><img src="pictures/e-book.jpg" alt="" /></a>
+                            <p>Immerse yourself in a wealth of knowledge through our digital resources, carefully curated to enhance your learning journey. Our dedicated managers prioritize the seamless integration and continuous improvement of these resources, ensuring they align with your academic needs. With a commitment to excellence, our team continually evaluates and updates our digital offerings, guaranteeing you access to the latest and most relevant materials for your educational success.</p>
+                        </article>
+                    </div>
                 </div>
-                <div class="Undergraduate">
-                    <div class="row_heading">
-                        <a href="Undergraduate.html">Undergraduate Courses</a>
-                    </div>
-                    <p>We have a fine combination of Undergraduate Courses. Do well to check it out</p>
-                </div>
-                <div class="MPhil_MSc">
-                    <div class="row_heading">
-                        <a href="Postgraduate.html">MPhil and MSc. Programmes</a>
-                    </div>
-                    <p>Click here to get access to our variety of MPhil and MSc. programmes.</p>
-                </div>
-                <div class="PHD">
-                    <div class="row_heading">
-                        <a href="Postgraduate.html">PHD Programmes
-                            <br>
-                        </a>
-                    </div>
-                    <p class="phd_text">Click here to get access to our variety of Ph.D. programmes</p>
+                <div class="row features">
+                    <!-- Features section -->
+                    <section class="col-4 col-12-narrower feature">
+                        <div class="image-wrapper first">
+                            <a href="#" class="image-featured"><img src="images/Balme library.jpg" alt="" /></a>
+                        </div>
+                        <header style="background-color: #1176d4; color: #fff; padding: 10px 20px;">
+                            <h3>Our Frontline Team</h3>
+                        </header>
+                        <p>With a friendly smile and efficient service, our ID check staff ensures a secure and conducive environment for your study sessions.</p>
+                    </section>
+                    <section class="col-4 col-12-narrower feature">
+                        <div class="image-wrapper">
+                            <a href="#" class="image-featured"><img src="pictures/inside.jpeg" alt="Library Picture" height="220" /></a>
+                        </div>
+                        <header style="background-color: #1176d4; color: #fff; padding: 10px 20px;">
+                            <h3>Study Spaces</h3>
+                        </header>
+                        <p>There are various study spaces available in the library, including quiet zones, group study areas, and collaborative spaces.</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button">Catalog</a></li>
+                        </ul>
+                    </section>
+                    <section class="col-4 col-12-narrower feature">
+                        <div class="image-wrapper">
+                            <a href="#" class="image-featured"><img src="pictures/staff.jpg" alt="Library picture" height="220" /></a>
+                        </div>
+                        <header style="background-color: #1176d4; color: #fff; padding: 10px 20px;">
+                            <h3>Library Staff</h3>
+                        </header>
+                        <p>Meet our friendly and knowledgeable library staff, ready to assist you on your academic journey.</p>
+                    </section>
                 </div>
             </div>
         </div>
-    </main>
-    
-    <h1>This Computer Science thing be SCAM charlie</h1>
+    </div>
 
-    <!-- Start Footer Area -->
+
+
+
     <footer class="footer-area section-gap">
         <div class="container">
             <div class="row">
@@ -218,7 +355,6 @@
             
         </div>
     </footer>
-    
 
 <script src="highlight.js"></script>
 </body>
