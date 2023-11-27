@@ -241,7 +241,7 @@ body {
 				-webkit-align-items: center;
 				-ms-align-items: center;
 				align-items: center;
-				-moz-flex-direction: ;
+				-moz-flex-direction: row-reverse;
 				-webkit-flex-direction: row;
 				-ms-flex-direction: row;
 				flex-direction: row;
